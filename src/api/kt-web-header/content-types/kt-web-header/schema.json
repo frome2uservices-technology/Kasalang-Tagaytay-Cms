@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "kt_web_headers",
+  "info": {
+    "singularName": "kt-web-header",
+    "pluralName": "kt-web-headers",
+    "displayName": "kt-web-header"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeaderRegisterNowLabel": {
+      "type": "string"
+    },
+    "HeaderMyReservationLabel": {
+      "type": "string"
+    },
+    "HeaderEventExpoDate": {
+      "type": "string"
+    },
+    "HeaderNavigationTabs": {
+      "type": "json"
+    }
+  }
+}

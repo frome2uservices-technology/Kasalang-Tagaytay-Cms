@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "kt_web_expos",
+  "info": {
+    "singularName": "kt-web-expo",
+    "pluralName": "kt-web-expos",
+    "displayName": "kt-web-expo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ExpoSubtitle1": {
+      "type": "string"
+    },
+    "ExpoTitle": {
+      "type": "string"
+    },
+    "ExpoEventDateStart": {
+      "type": "string"
+    },
+    "ExpoEventDateEnd": {
+      "type": "string"
+    },
+    "ExpoLocation": {
+      "type": "string"
+    },
+    "ExpoEventDateStartTime": {
+      "type": "string"
+    },
+    "ExpoEventDateEndTime": {
+      "type": "string"
+    },
+    "ExpoRegisterNow": {
+      "type": "string"
+    },
+    "ExpoSubtitle2": {
+      "type": "string"
+    }
+  }
+}

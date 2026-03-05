@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "kt_web_experiences",
+  "info": {
+    "singularName": "kt-web-experience",
+    "pluralName": "kt-web-experiences",
+    "displayName": "kt-web-experience"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ExperienceTitle": {
+      "type": "string"
+    },
+    "ExperienceSubtitle": {
+      "type": "string"
+    },
+    "ExperienceDescription": {
+      "type": "text"
+    },
+    "ExperienceBookSupplierLabel": {
+      "type": "string"
+    }
+  }
+}

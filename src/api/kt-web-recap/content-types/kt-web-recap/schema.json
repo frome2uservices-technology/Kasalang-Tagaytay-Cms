@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "kt_web_recaps",
+  "info": {
+    "singularName": "kt-web-recap",
+    "pluralName": "kt-web-recaps",
+    "displayName": "kt-web-recap"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "RecapTitle": {
+      "type": "string"
+    },
+    "RecapBrowseSuppliersLabel": {
+      "type": "string"
+    },
+    "RecapPastEvents": {
+      "type": "json"
+    }
+  }
+}
