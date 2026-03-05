@@ -535,6 +535,41 @@ export interface ApiKtWebExpoKtWebExpo extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiKtWebFaqKtWebFaq extends Struct.SingleTypeSchema {
+  collectionName: 'kt_web_faqs';
+  info: {
+    displayName: 'kt-web-faq';
+    pluralName: 'kt-web-faqs';
+    singularName: 'kt-web-faq';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    FaqAddressText: Schema.Attribute.String;
+    FaqAskPersonalQuestionText: Schema.Attribute.String;
+    FaqEmailAddress: Schema.Attribute.String;
+    FaqFrequentlyAskedQuestions: Schema.Attribute.JSON;
+    FaqLocationText: Schema.Attribute.String;
+    FaqPhoneNumber: Schema.Attribute.String;
+    FaqSubtitle: Schema.Attribute.String;
+    FaqTitle: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::kt-web-faq.kt-web-faq'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiKtWebHeaderKtWebHeader extends Struct.SingleTypeSchema {
   collectionName: 'kt_web_headers';
   info: {
@@ -1110,6 +1145,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::kt-web-experience.kt-web-experience': ApiKtWebExperienceKtWebExperience;
       'api::kt-web-expo.kt-web-expo': ApiKtWebExpoKtWebExpo;
+      'api::kt-web-faq.kt-web-faq': ApiKtWebFaqKtWebFaq;
       'api::kt-web-header.kt-web-header': ApiKtWebHeaderKtWebHeader;
       'api::kt-web-recap.kt-web-recap': ApiKtWebRecapKtWebRecap;
       'plugin::content-releases.release': PluginContentReleasesRelease;

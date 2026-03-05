@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "kt_web_faqs",
+  "info": {
+    "singularName": "kt-web-faq",
+    "pluralName": "kt-web-faqs",
+    "displayName": "kt-web-faq"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FaqTitle": {
+      "type": "string"
+    },
+    "FaqSubtitle": {
+      "type": "string"
+    },
+    "FaqAddressText": {
+      "type": "string"
+    },
+    "FaqLocationText": {
+      "type": "string"
+    },
+    "FaqAskPersonalQuestionText": {
+      "type": "string"
+    },
+    "FaqEmailAddress": {
+      "type": "string"
+    },
+    "FaqPhoneNumber": {
+      "type": "string"
+    },
+    "FaqFrequentlyAskedQuestions": {
+      "type": "json"
+    }
+  }
+}
