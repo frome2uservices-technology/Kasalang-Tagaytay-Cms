@@ -22,6 +22,9 @@
     },
     "HeaderNavigationTabs": {
       "type": "json"
+    },
+    "HeaderRegistrarionLink": {
+      "type": "string"
     }
   }
 }

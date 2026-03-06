@@ -519,6 +519,7 @@ export interface ApiKtWebExpoKtWebExpo extends Struct.SingleTypeSchema {
     ExpoEventDateStartTime: Schema.Attribute.String;
     ExpoLocation: Schema.Attribute.String;
     ExpoRegisterNow: Schema.Attribute.String;
+    ExpoRegistrationLink: Schema.Attribute.String;
     ExpoSubtitle1: Schema.Attribute.String;
     ExpoSubtitle2: Schema.Attribute.String;
     ExpoTitle: Schema.Attribute.String;
@@ -543,7 +544,7 @@ export interface ApiKtWebFaqKtWebFaq extends Struct.SingleTypeSchema {
     singularName: 'kt-web-faq';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -588,6 +589,7 @@ export interface ApiKtWebHeaderKtWebHeader extends Struct.SingleTypeSchema {
     HeaderMyReservationLabel: Schema.Attribute.String;
     HeaderNavigationTabs: Schema.Attribute.JSON;
     HeaderRegisterNowLabel: Schema.Attribute.String;
+    HeaderRegistrarionLink: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

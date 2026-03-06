@@ -37,6 +37,9 @@
     },
     "ExpoSubtitle2": {
       "type": "string"
+    },
+    "ExpoRegistrationLink": {
+      "type": "string"
     }
   }
 }
