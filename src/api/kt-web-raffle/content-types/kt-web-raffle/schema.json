@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "kt_web_raffles",
+  "info": {
+    "singularName": "kt-web-raffle",
+    "pluralName": "kt-web-raffles",
+    "displayName": "kt-web-raffle"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "RaffleTitle": {
+      "type": "string"
+    },
+    "RaffleSubtitle": {
+      "type": "string"
+    },
+    "RaffleHashtag": {
+      "type": "string"
+    },
+    "RaffleHashtagDescription": {
+      "type": "string"
+    },
+    "RafflePrizes": {
+      "type": "json"
+    }
+  }
+}

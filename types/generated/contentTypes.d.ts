@@ -484,6 +484,7 @@ export interface ApiKtWebExperienceKtWebExperience
       Schema.Attribute.Private;
     ExperienceBookSupplierLabel: Schema.Attribute.String;
     ExperienceDescription: Schema.Attribute.Text;
+    ExperienceFeaturedImage: Schema.Attribute.String;
     ExperienceSubtitle: Schema.Attribute.String;
     ExperienceTitle: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -517,6 +518,7 @@ export interface ApiKtWebExpoKtWebExpo extends Struct.SingleTypeSchema {
     ExpoEventDateEndTime: Schema.Attribute.String;
     ExpoEventDateStart: Schema.Attribute.String;
     ExpoEventDateStartTime: Schema.Attribute.String;
+    ExpoFeaturedImage: Schema.Attribute.String;
     ExpoLocation: Schema.Attribute.String;
     ExpoRegisterNow: Schema.Attribute.String;
     ExpoRegistrationLink: Schema.Attribute.String;
@@ -597,6 +599,72 @@ export interface ApiKtWebHeaderKtWebHeader extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiKtWebPerkKtWebPerk extends Struct.SingleTypeSchema {
+  collectionName: 'kt_web_perks';
+  info: {
+    displayName: 'kt-web-perk';
+    pluralName: 'kt-web-perks';
+    singularName: 'kt-web-perk';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::kt-web-perk.kt-web-perk'
+    > &
+      Schema.Attribute.Private;
+    PerkFeaturedImages: Schema.Attribute.JSON;
+    PerkPerkList: Schema.Attribute.JSON;
+    PerkRegisterNowLabel: Schema.Attribute.String;
+    PerkRegistrationLink: Schema.Attribute.String;
+    PerkReminder: Schema.Attribute.String;
+    PerkSubtitle: Schema.Attribute.String;
+    PerkTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiKtWebRaffleKtWebRaffle extends Struct.SingleTypeSchema {
+  collectionName: 'kt_web_raffles';
+  info: {
+    displayName: 'kt-web-raffle';
+    pluralName: 'kt-web-raffles';
+    singularName: 'kt-web-raffle';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::kt-web-raffle.kt-web-raffle'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    RaffleHashtag: Schema.Attribute.String;
+    RaffleHashtagDescription: Schema.Attribute.String;
+    RafflePrizes: Schema.Attribute.JSON;
+    RaffleSubtitle: Schema.Attribute.String;
+    RaffleTitle: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1149,6 +1217,8 @@ declare module '@strapi/strapi' {
       'api::kt-web-expo.kt-web-expo': ApiKtWebExpoKtWebExpo;
       'api::kt-web-faq.kt-web-faq': ApiKtWebFaqKtWebFaq;
       'api::kt-web-header.kt-web-header': ApiKtWebHeaderKtWebHeader;
+      'api::kt-web-perk.kt-web-perk': ApiKtWebPerkKtWebPerk;
+      'api::kt-web-raffle.kt-web-raffle': ApiKtWebRaffleKtWebRaffle;
       'api::kt-web-recap.kt-web-recap': ApiKtWebRecapKtWebRecap;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

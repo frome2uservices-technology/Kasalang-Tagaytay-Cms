@@ -22,6 +22,9 @@
     },
     "ExperienceBookSupplierLabel": {
       "type": "string"
+    },
+    "ExperienceFeaturedImage": {
+      "type": "string"
     }
   }
 }

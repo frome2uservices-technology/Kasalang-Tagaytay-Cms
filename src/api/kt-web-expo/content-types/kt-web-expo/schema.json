@@ -40,6 +40,9 @@
     },
     "ExpoRegistrationLink": {
       "type": "string"
+    },
+    "ExpoFeaturedImage": {
+      "type": "string"
     }
   }
 }

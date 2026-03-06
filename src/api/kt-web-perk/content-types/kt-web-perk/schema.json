@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "kt_web_perks",
+  "info": {
+    "singularName": "kt-web-perk",
+    "pluralName": "kt-web-perks",
+    "displayName": "kt-web-perk"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PerkTitle": {
+      "type": "string"
+    },
+    "PerkSubtitle": {
+      "type": "string"
+    },
+    "PerkPerkList": {
+      "type": "json"
+    },
+    "PerkReminder": {
+      "type": "string"
+    },
+    "PerkRegisterNowLabel": {
+      "type": "string"
+    },
+    "PerkRegistrationLink": {
+      "type": "string"
+    },
+    "PerkFeaturedImages": {
+      "type": "json"
+    }
+  }
+}
