@@ -701,6 +701,52 @@ export interface ApiKtWebRecapKtWebRecap extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiKtWebReservationKtWebReservation
+  extends Struct.SingleTypeSchema {
+  collectionName: 'kt_web_reservations';
+  info: {
+    displayName: 'kt-web-reservation';
+    pluralName: 'kt-web-reservations';
+    singularName: 'kt-web-reservation';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::kt-web-reservation.kt-web-reservation'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    ReservationCompanyAddress: Schema.Attribute.String;
+    ReservationCompanyContact: Schema.Attribute.String;
+    ReservationCompanyName: Schema.Attribute.String;
+    REservationCustomerName: Schema.Attribute.String;
+    ReservationCustomerReservationDate: Schema.Attribute.String;
+    ReservationCustomerReservationID: Schema.Attribute.String;
+    ReservationEnterID: Schema.Attribute.String;
+    ReservationFindReservationSubtitle: Schema.Attribute.String;
+    ReservationFindReservationTitle: Schema.Attribute.String;
+    ReservationInvoiceSubtitle: Schema.Attribute.String;
+    ReservationInvoiceTitle: Schema.Attribute.String;
+    ReservationSearchButton: Schema.Attribute.String;
+    ReservationSearchReservation: Schema.Attribute.String;
+    ReservationTableAmount: Schema.Attribute.String;
+    ReservationTableService: Schema.Attribute.String;
+    ReservationTableSupplier: Schema.Attribute.String;
+    ReservationTableSupplierContact: Schema.Attribute.String;
+    ReservationTotal: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1220,6 +1266,7 @@ declare module '@strapi/strapi' {
       'api::kt-web-perk.kt-web-perk': ApiKtWebPerkKtWebPerk;
       'api::kt-web-raffle.kt-web-raffle': ApiKtWebRaffleKtWebRaffle;
       'api::kt-web-recap.kt-web-recap': ApiKtWebRecapKtWebRecap;
+      'api::kt-web-reservation.kt-web-reservation': ApiKtWebReservationKtWebReservation;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -1,0 +1,69 @@
+{
+  "kind": "singleType",
+  "collectionName": "kt_web_reservations",
+  "info": {
+    "singularName": "kt-web-reservation",
+    "pluralName": "kt-web-reservations",
+    "displayName": "kt-web-reservation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ReservationFindReservationTitle": {
+      "type": "string"
+    },
+    "ReservationFindReservationSubtitle": {
+      "type": "string"
+    },
+    "ReservationSearchReservation": {
+      "type": "string"
+    },
+    "ReservationEnterID": {
+      "type": "string"
+    },
+    "ReservationSearchButton": {
+      "type": "string"
+    },
+    "ReservationInvoiceTitle": {
+      "type": "string"
+    },
+    "ReservationInvoiceSubtitle": {
+      "type": "string"
+    },
+    "ReservationCustomerReservationID": {
+      "type": "string"
+    },
+    "ReservationCustomerReservationDate": {
+      "type": "string"
+    },
+    "REservationCustomerName": {
+      "type": "string"
+    },
+    "ReservationCompanyName": {
+      "type": "string"
+    },
+    "ReservationCompanyAddress": {
+      "type": "string"
+    },
+    "ReservationCompanyContact": {
+      "type": "string"
+    },
+    "ReservationTableSupplier": {
+      "type": "string"
+    },
+    "ReservationTableSupplierContact": {
+      "type": "string"
+    },
+    "ReservationTableService": {
+      "type": "string"
+    },
+    "ReservationTableAmount": {
+      "type": "string"
+    },
+    "ReservationTotal": {
+      "type": "string"
+    }
+  }
+}
